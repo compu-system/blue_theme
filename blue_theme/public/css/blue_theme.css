@@ -1,0 +1,623 @@
+/* ==================== 🎨 JUSTDO COLOR THEME VARIABLES ==================== */
+:root {
+    --primary-color: #248AFD;        /* Dodger Blue */
+    --primary-orange: #F5A623;       /* Orange Accent */
+    --primary-red: #FF4747;          /* Red */
+    --primary-green: #71C02B;        /* Green */
+    --primary-yellow: #FFC100;       /* Yellow */
+    --background-color: #ffffff;     /* White */
+    --secondary-bg: #f8f9fa;         /* Light Gray */
+    --secondary-color: #d1d5db;      /* Light Border Gray */
+    --text-color: #1a1a1a;           /* Dark Text */
+    --muted-text: #5a5a5a;           /* Secondary Text */
+    --border-radius: 10px;
+    --box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    --transition-speed: 0.3s;
+}
+
+/* ==================== 🖋 GLOBAL ==================== */
+body {
+    background-color: #c7e2f74a !important;
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* Smooth transitions for all elements */
+* {
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed), transform var(--transition-speed);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--secondary-bg);
+}
+
+/* ==================== 📌 NAVBAR ==================== */
+.navbar {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--secondary-color);
+    height: 55px;
+    box-shadow: var(--box-shadow);
+}
+.navbar-home img {
+    max-height: 50px !important;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+}
+#navbar-breadcrumbs a {
+    color: var(--text-color);
+    font-weight: bold;
+}
+#navbar-breadcrumbs a:hover {
+    color: var(--primary-color);
+}
+
+/* ==================== 📂 SIDEBAR ==================== */
+.desk-sidebar-item {
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    margin: 5px 0;
+    padding: 6px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.standard-sidebar-item {
+    color: var(--text-color);
+    font-weight: 500;
+}
+.standard-sidebar-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+.standard-sidebar-item.selected {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* ==================== 🔘 BUTTONS ==================== */
+.btn, .btn-primary {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-radius: var(--border-radius);
+    padding: 8px 15px;
+    box-shadow: var(--box-shadow);
+}
+.btn:hover {
+    background-color: #1b6fd1 !important;
+    transform: translateY(-1px);
+}
+
+/* Accent Button Variants */
+.btn-orange { background-color: var(--primary-orange) !important; color: white !important; }
+.btn-red { background-color: var(--primary-red) !important; color: white !important; }
+.btn-green { background-color: var(--primary-green) !important; color: white !important; }
+.btn-yellow { background-color: var(--primary-yellow) !important; color: white !important; }
+
+/* ==================== 🃏 CARDS ==================== */
+.card {
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+/* ==================== 📝 HEADINGS ==================== */
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ==================== 📑 FORMS ==================== */
+input, select, textarea {
+    border: 1px solid var(--secondary-color) !important;
+    border-radius: var(--border-radius);
+    padding: 8px;
+    background-color: var(--background-color) !important;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 6px rgba(36,138,253,0.3);
+    outline: none;
+}
+
+/* ==================== 📋 LIST ROWS ==================== */
+.list-row {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 10px 14px;
+}
+.list-row:nth-child(even) {
+    background-color: var(--secondary-bg);
+}
+.list-row:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateX(3px);
+}
+
+/* ==================== 🏷 WIDGETS ==================== */
+.widget {
+    background-color: var(--background-color) !important;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+.widget .widget-head {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* ==================== 📊 STATUS COLORS ==================== */
+.status-success { color: var(--primary-green); }
+.status-danger { color: var(--primary-red); }
+.status-warning { color: var(--primary-yellow); }
+.status-info { color: var(--primary-color); }
+
+/* ==================== 💡 EXTRA EYE-FRIENDLY TOUCHES ==================== */
+/* Glassmorphism style for modals */
+.modal-content {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+}
+table td {
+    padding: 8px;
+    border: 1px solid var(--secondary-color);
+}
+/* ==================== 🔍 PREMIUM BIG SEARCH BAR ==================== */
+.search-bar .awesomplete input {
+    width: 100%;
+    padding: 16px 20px 16px 50px; /* Bigger padding, space for icon */
+    border: 2px solid var(--secondary-color);
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.95); /* Glass effect */
+    backdrop-filter: blur(10px);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.05);
+    transition: all 0.35s ease;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%235a5a5a' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.71 20.29l-3.4-3.39A9 9 0 1019 17a9 9 0 00-7-16 9 9 0 000 18 9 9 0 006.9-3.29l3.4 3.39a1 1 0 001.41-1.41zM4 10a6 6 0 1110.95 3.54A6 6 0 014 10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    background-size: 20px;
+}
+
+.search-bar .awesomplete input:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0px 10px 25px rgba(36,138,253,0.15);
+}
+
+.search-bar .awesomplete input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0px 12px 30px rgba(36,138,253,0.25);
+    outline: none;
+    transform: scale(1.02);
+}
+
+.search-bar .awesomplete input::placeholder {
+    color: var(--muted-text);
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+.awesomplete ul {
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 8px;
+    padding: 6px 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+.awesomplete li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+}
+.awesomplete li:hover {
+    background: var(--primary-color);
+    color: white;
+}
+/* ==================== 🎨 BUTTON DESIGN SYSTEM ==================== */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #1b6fd1;
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(36,138,253,0.3);
+}
+
+/* Success Button */
+.btn-success {
+    background-color: var(--primary-green);
+    color: #fff;
+}
+.btn-success:hover {
+    background-color: #5aa122;
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(113,192,43,0.3);
+}
+
+/* Danger Button */
+.btn-danger {
+    background-color: var(--primary-red);
+    color: #fff;
+}
+.btn-danger:hover {
+    background-color: #d13b3b;
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(255,71,71,0.3);
+}
+
+/* Warning Button */
+.btn-warning {
+    background-color: var(--primary-yellow);
+    color: #000;
+}
+.btn-warning:hover {
+    background-color: #e6ae00;
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(255,193,0,0.3);
+}
+
+/* Orange Accent */
+.btn-orange {
+    background-color: var(--primary-orange);
+    color: #fff;
+}
+.btn-orange:hover {
+    background-color: #d68b1e;
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(245,166,35,0.3);
+}
+
+/* Outline Buttons */
+.btn-outline {
+    background: transparent;
+    border: 2px solid currentColor;
+    color: var(--text-color);
+}
+.btn-outline:hover {
+    background-color: currentColor;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Pill Buttons */
+.btn-pill {
+    border-radius: 50px;
+}
+
+/* Gradient Buttons */
+.btn-gradient {
+    background: linear-gradient(135deg, var(--primary-color), #4aa8ff);
+    color: #fff;
+}
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #1b6fd1, var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(36,138,253,0.3);
+}
+/* Sidebar Styling */
+.layout-side-section {
+    background-color: #248afd;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.layout-side-section .sidebar-item,
+.layout-side-section .module-sidebar-item {
+    color: #ffffff;
+    font-weight: var(--weight-medium);
+    border-radius: var(--border-radius-md);
+    padding: 10px 14px;
+    margin: 4px 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.layout-side-section .sidebar-item:hover,
+.layout-side-section .module-sidebar-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #e2e2e2;
+}
+
+/* Active Item */
+.layout-side-section .sidebar-item.active,
+.layout-side-section .module-sidebar-item.active {
+    background-color: #1f77d0;
+    color: #ffffff;
+    font-weight: var(--weight-semibold);
+}
+
+/* Sidebar Icons */
+.layout-side-section .sidebar-item .icon,
+.layout-side-section .module-sidebar-item .icon {
+    color: #ffffff;
+    margin-right: 8px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.layout-side-section .sidebar-item:hover .icon,
+.layout-side-section .module-sidebar-item:hover .icon {
+    opacity: 1;
+}
+
+/* Navbar Styling */
+.navbar,
+.navbar-default {
+    background-color: #248afd;
+    border-bottom: 1px solid #1f77d0;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-nav > li > a {
+    color: #ffffff !important;
+    font-weight: var(--weight-medium);
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover,
+.navbar .navbar-nav > li > a:hover {
+    color: #e2e2e2 !important;
+}
+
+/* Navbar Dropdown */
+.navbar .dropdown-menu {
+    background-color: #1f77d0;
+    border-radius: var(--border-radius-md);
+    border: none;
+}
+
+.navbar .dropdown-menu a {
+    color: #ffffff !important;
+}
+
+.navbar .dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Grid Heading Row */
+.grid-heading-row {
+    border-bottom: 1px solid var(--table-border-color);
+    background-color: var(--subtle-fg);
+    color: var(--gray-700);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.02em;
+    height: 36px;
+    padding: 0 10px !important;
+    border-top-left-radius: var(--border-radius-md);
+    border-top-right-radius: var(--border-radius-md);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.grid-heading-row:hover {
+    background-color: var(--gray-100);
+    color: var(--gray-900);
+}
+
+/* Number Widget Box Header */
+.widget.number-widget-box .widget-head .widget-title {
+    font-weight: var(--weight-semibold);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: var(--text-sm);
+    margin-top: var(--margin-xs);
+    letter-spacing: 0.04em;
+    transition: color 0.3s ease;
+}
+
+.widget.number-widget-box:hover .widget-head .widget-title {
+    color: #f0f0f0;
+}
+
+/* General Widget Title */
+.widget .widget-head .widget-label .widget-title {
+    display: flex;
+    align-items: center;
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.015em;
+    font-family: inherit;
+    line-height: 1.3em;
+    color: #ffffff;
+    cursor: default;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.widget .widget-head .widget-label .widget-title:hover {
+    color: #e2e2e2;
+    transform: translateY(-1px);
+}
+
+/* Add subtle shadow to widgets */
+.widget {
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.widget:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Improved padding for better breathing space */
+.widget .widget-head {
+    padding: 8px 12px;
+}
+
+.widget .widget-body {
+    padding: 12px 16px;
+}
+.widget.links-widget-box .widget-head .widget-label .widget-title {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    letter-spacing: .015em;
+    color: #ffffff !important;
+}.search-bar svg
+Specificity: (0,1,1)
+ {
+    stroke: #ffffff;
+}.page-head {
+    z-index: 5;
+    position: sticky;
+    top: var(--navbar-height);
+    background: var(--bg-color);
+    margin-bottom: 0px;
+    transition
+Shorthand property combines four of the transition properties into a single property.
+Learn more
+
+Don't show
+: 0.5s top;
+}.list-row-head {
+    cursor: default;
+    background-color: #abdaff;
+    height: 30px;
+    margin: .5rem var(--padding-xs);
+    border-radius: var(--border-radius-md);
+}/* Control Labels and Grid Heading Row */
+.control-label,
+.grid-heading-row {
+    color: #000000; /* White text for better contrast */
+    background-color: #c5d8ee; /* Matching theme background */
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium); /* Slightly bolder for visibility */
+    letter-spacing: 0.02em;
+    padding: 6px 10px;
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Grid Heading Row */
+.grid-heading-row:hover {
+    background-color: #1f77d0; /* Slightly darker on hover */
+    color: #ffffff;
+}
+
+/* Control Label Alignment */
+.control-label {
+    display: inline-block;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
+
+/* For Required Fields */
+.control-label.required:after {
+    content: " *";
+    color: #ffcc00; /* Highlight required indicator */
+}
+/* Links Widget Items */
+.widget.links-widget-box .link-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.02em;
+    color: #248afd; /* النص باللون الرئيسي */
+    background-color: #e6f2ff; /* اللون الفاتح الجديد */
+    padding: 6px 10px;
+    margin: 4px 0;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.widget.links-widget-box .link-item:hover {
+    background-color: #cce5ff; /* أغمق قليلًا للهُوفر */
+    color: #1865b8; /* درجة أدكن من الأساسي */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Active Link Item */
+.widget.links-widget-box .link-item.active {
+    background-color: #248afd; /* اللون الأساسي */
+    color: #ffffff;
+    font-weight: var(--weight-semibold);
+}
+
+/* Editor Links */
+.ce-block a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #248afd;
+    transition: color 0.3s ease;
+}
+
+.ce-block a:hover {
+    color: #1f77d0;
+}
+
+/* Control Labels and Grid Heading Row */
+.control-label,
+.grid-heading-row {
+    color: #000000; /* النص أسود لتباين جيد */
+    background-color: #c5d8ee; /* اللون الفاتح */
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.02em;
+    padding: 6px 10px; /* نفس مسافة الحقل تقريبًا */
+    border-radius: var(--border-radius-sm);
+    display: block; /* يغطي عرض الحقل بالكامل */
+    width: 100%; /* ليكون بنفس عرض الحقل */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.4;
+    box-sizing: border-box; /* لضبط الحواف مع الحقل */
+}
+
+/* Hover Effect for Grid Heading Row */
+.grid-heading-row:hover {
+    background-color: #1f77d0;
+    color: #ffffff;
+}
